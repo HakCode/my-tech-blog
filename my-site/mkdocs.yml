@@ -29,6 +29,7 @@ nav:
   - About: about.md
   - Posts:
       - Welcome Post: posts/welcome.md
+      - First Post: posts/2025-06-27 First Post.md
 plugins:
   - search
 
