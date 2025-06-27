@@ -1,0 +1,51 @@
+site_name: My Tech Blog
+site_url: https://HakCode.github.io/my-tech-blog
+repo_url: https://github.com/HakCode/my-tech-blog
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.extra
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji
+  - pymdownx.keys
+  - pymdownx.tasklist
+nav:
+  - Home: index.md
+  - About: about.md
+  - Posts:
+      - Welcome Post: posts/welcome.md
+plugins:
+  - search
+
+# GitHub Actions Deploy Workflow: .github/workflows/deploy.yml
+# --------------------------------------------
+# name: Deploy MkDocs to GitHub Pages
+# on:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.x'
+#       - run: pip install mkdocs-material
+#       - run: mkdocs gh-deploy --force
